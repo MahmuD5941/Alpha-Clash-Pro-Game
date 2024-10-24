@@ -51,7 +51,10 @@ function getRandomAlphabet(elementId) {
 //capture keyboard press by event handler...
 document.addEventListener('keyup', function (event) {
     const playerPressed = event.key;
-
+    //game over by escape key pressed...
+    if(playerPressed==='Escape'){
+        gameOver();
+    }
     //expected key....
     const currentAlphabetElement = document.getElementById('Current-Alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
